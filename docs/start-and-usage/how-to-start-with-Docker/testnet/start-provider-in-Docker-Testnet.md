@@ -4,48 +4,13 @@
 
 ### Step 1: Docker Environment Preparation
 
-#### For Linux
-
-If you are using Linux OS, just install docker to continue.
-
-[Install docker](docker-install.md)
+View Docker Installation section to install docker.
 
 Confirm Docker is running after install.
 
 ```shell
 service docker start
 ```
-
-#### For Windows
-
-If you are using Windows OS, you should install docker first, then install wsl to emulate a linux OS.
-
-Install Docker in Windows
-Just download and install the docker application in Windows.
-
-Download link: https://www.docker.com/
-
-Install wsl
-
-Using ubuntu 20.04 as an example.
-Open the starting menu and run microsoft store.
-Search for wsl, click Ubuntu 20.04 in the results to install.
-
-Switch wsl1 to wsl2
-
-Right click the start memu and open powershell(administrator), run:
-
-```shell
-wsl --set-version Ubuntu-20.04 2
-```
-
-Confirm the wsl version is switched to version 2
-
-```shell
-wsl -l -v
-```
-
-Run Ubuntu 20.04 from start memu to enter an emulated Ubuntu 20.04 and continue.
 
 ### Step 2: Set up the home directory
 
@@ -122,6 +87,10 @@ The network must be confirmed before application, usually either test net or pro
 
 The wallet address is the wallet address generated in the previous step. 
 
+Join our discussing with Slack Link:
+
+https://join.slack.com/t/memo-nru9073/shared_invite/zt-sruhyryo-suc689Nza3z8boa4JkaLqw
+
 ### Step 7: Set configurations
 
 Here are configurations for testnet.
@@ -154,7 +123,9 @@ docker run -d -p 4001:4001 -v $MEFS_PATH:/root -v $MEFS_DATA:/root/data -e PASSW
 
 • Please make sure your provider home directory and password are the same as in the previous step.
 
-If you have any technical problems, please join our Discord server for help. [Memo Labs](https://discord.gg/YXQQwPhMpq)
+If you have any technical problems, please join our Discord server for help. 
+
+[Memo Labs](https://discord.gg/YXQQwPhMpq)
 
 ## Checking the running status
 
@@ -181,13 +152,13 @@ mefs-provider info
 
 ----------- Network Information -----------
 
-ID: 12D3KooWR74K1v6naGUAjHRrkakxVS88h4X93bMnquoRiEDdLJTx
+ID: 12D3KooWR74K1v63aGUAjHRrkakxVS88h4X93bMnquoRiEDdLJTx
 
 IP: [/ip4/10.xx.xx.xx/tcp/8003] #The current node network information, 8003 is the swarm-port port, used for node communication
 
 Type: Private
 
-Declared Address: {12D3KooWR74K1v6naGUAjHRrkakxVS88h4X93bMnquoRiEDdLJTx: [/ip4/10.xx.xx.xx/tcp/8003]}
+Declared Address: {12D3KooWR74K126naGUAjHRrkakxVS88h4X93bMnquoRiEDdLJTx: [/ip4/10.xx.xx.xx/tcp/8003]}
 
 ----------- Sync Information -----------
 
@@ -203,7 +174,7 @@ ID: 30
 
 Type: Provider
 
-Wallet: 0x749573E16C18A0f5Eb53248382588e2064E0Af80
+Wallet: 0x749571E16C18A0f5Eb53248382588e2064E0Af80
 
 Balance: 999.87 Gwei (tx fee), 0 AttoMemo (Erc20), 493586.64 NanoMemo (in fs)
 
@@ -213,9 +184,9 @@ Data Stored: size 57647104 byte (54.98 MiB), price 56750000
 
 EndPoint: http://119.xx.xx.xx:8191
 
-Contract Address: 0xCa2C4103bd5679F43eC9E277C2bAf5598f94Fe6D
+Contract Address: 0xCa2C4103b35679F43eC9E277C2bAf5598f94Fe6D
 
-Fs Address: 0xFB9FF16EB4093aa8fFf762F2dF4E61d3A7532Af9
+Fs Address: 0xFB9FF162B4093aa8fFf762F2dF4E61d3A7532Af9
 
 ID: 1 #group id
 
@@ -252,7 +223,7 @@ X.X.X.X is your public ip address.
 
 Port 4007 is your public network port, and the mapped port is the host's port 4001 (-p 4001: the first port 4001 of the boot parameter).​
 
-## Checking the net status
+## Checking network status
 
 **Get local node network information**
 
@@ -263,7 +234,7 @@ mefs-provider net info
 ```
 
 ```shell
-Network ID 12D3KooWBpPPzk9srHVVU4kkVF1RPJi9nYNgV4e6Yjjd4PGr5qrk, IP [/ip4/10.xx.xx.xx/tcp/18003], Type: Private 
+Network ID 12D3KooWBpPPzk9srHVVU4kkVF1RP1i9nYNgV4e6Yjjd4PGr5qrk, IP [/ip4/10.xx.xx.xx/tcp/18003], Type: Private 
 ```
 
 **Get the network connection information of the node**

@@ -4,10 +4,6 @@
 
 ### Step 1: Docker Environment Preparation
 
-#### For Linux
-
-If you are using Linux OS, just install docker to continue.
-
 [Install docker](docker-install.md)
 
 Confirm Docker is running after install.
@@ -16,47 +12,19 @@ Confirm Docker is running after install.
 service docker start
 ```
 
-#### For Windows
-
-If you are using Windows OS, you should install docker first, then install wsl to emulate a linux OS.
-
-Install Docker in Windows
-Just download and install the docker application in Windows.
-
-Download link: https://www.docker.com/
-
-Install wsl
-
-Using ubuntu 20.04 as an example.
-Open the starting menu and run microsoft store.
-Search for wsl, click Ubuntu 20.04 in the results to install.
-
-Switch wsl1 to wsl2
-
-Right click the start memu and open powershell(administrator), run:
-
-```shell
-wsl --set-version Ubuntu-20.04 2
-```
-
-Confirm the wsl version is switched to version 2
-
-```shell
-wsl -l -v
-```
-
-Run Ubuntu 20.04 from start memu to enter an emulated Ubuntu 20.04 and continue.
-
 ### Step 2: Set up the home directory
 
-Node home directory: 
+Set node home directory: 
+
 Using "~/memo_provider" as an example:
 
 ```shell
 export MEFS_PATH=~/memo_provider
 ```
 
-Node data storage directory: ~/memo_provider_data as an example:
+Set node data storage directory: 
+
+~/memo_provider_data as an example:
 
 ```shell
 export MEFS_DATA=~/memo_provider_data
@@ -72,17 +40,17 @@ docker pull memoio/mefs-provider:latest
 
 ### Step 4: Initialization（Create new wallet）
 
+Execute the initialize command, which will generate your wallet address and generate a configuration file. 
+
 ```shell
 docker run --rm -v $MEFS_PATH:/root --entrypoint mefs-provider memoio/mefs-provider:latest init --password=memoriae
 ```
 
-• Parameter explanation:
+Explanation of arguments:
 
 --password： Enter your provider password, the default is memoriae.
 
-Init: Execute the initialize command, which will generate your wallet address and generate a configuration file. 
-
-### Step 5: Get wallet address
+### Step 5: Check wallet address
 
 ```shell
 docker run --rm -v $MEFS_PATH:/root --entrypoint mefs-provider memoio/mefs-provider:latest wallet default
@@ -94,37 +62,25 @@ wallet default: Get the default wallet address
 
 ### Step 6: Top up
 
-Please post tweet and send email to complete the registration.
+Starting node needs both the Memo and cMemo token. 
 
-1. Please post the tweet using your personal Twitter account and**@**[MemoLabs](https://twitter.com/Memo_Labs).
+To get the cMemo token,  there is one faucet,  https://faucet.metamemo.one/ 
 
-Twittercontent：
+This is the MemoChain information.  
 
-```shell
-I have joined the MEMO testnet.
-```
+Memochain information 
 
-2. Please send an email to [sup@memolabs.org](mailto:sup@memolabs.org) to apply for provider registration, also attach the link to Tweet. 
+Chain RCP: https://chain.metamemo.one:8501/ 
 
-Email Example
+Currency name: CMEMO 
 
-```shell
-Network: megrez
-Wallet Address: 0x70955480f225b23f60c37c4B6e88C63E3ACD723
-Role: provider
-Twitter Link: 
-https://twitter.com/Geo***71090/status/1387**********01381?s=20*
-```
+Chain ID: 985 
 
-Note: 
+Chain browser: https://scan.metamemo.one:8080/
 
-The network must be confirmed before application, usually either test net or product net.
+To get the Memo Token,  please transfer the Memo Token to the current wallet address from the other address with Memo Token.  The provider needs minimum 30 Memo Tokens.  
 
-The wallet address is the wallet address generated in the previous step. 
-
-### Step 7: Set configurations
-
-Here are configurations for megrez.
+### Step 7: Modify the configuration file
 
 ```shell
 docker run --rm -v $MEFS_PATH:/root --entrypoint mefs-provider memoio/mefs-provider:latest config set --key=contract.version --value=3
@@ -143,7 +99,7 @@ docker run --rm -v $MEFS_PATH:/root --entrypoint mefs-provider memoio/mefs-provi
 ```
 
 ```shell
-docker run --rm -v $MEFS_PATH:/root --entrypoint mefs-provider memoio/mefs-provider:latest bootstrap add "/ip4/1.182.90.4/tcp/27360/p2p/12D3KooWFhw59q71vpM8LpRTZ4NJmteXLys2pryHAStxG4Mb3wrn"
+docker run --rm -v $MEFS_PATH:/root --entrypoint mefs-provider memoio/mefs-provider:latest bootstrap add "/ip4/183.240.197.189/tcp/14006/p2p/12D3KooWAMpZPwfJopVnp99oqp4zhbjE1G3LFAkcjfBuiyzyCmv7"
 ```
 
 
@@ -155,11 +111,13 @@ docker run -d -p 4001:4001 -v $MEFS_PATH:/root -v $MEFS_DATA:/root/data -e PASSW
 
 • Please make sure your provider home directory and password are the same as in the previous step.
 
-If you have any technical problems, please join our Discord server for help. [Memo Labs](https://discord.gg/YXQQwPhMpq)
+If there is any deploy issue.  Please join the deploy-node discussing with Slack Link:
+
+https://join.slack.com/t/memo-nru9073/shared_invite/zt-sruhyryo-suc689Nza3z8boa4JkaLqw
 
 ## Checking the running status
 
-### Step 1: Enter the container
+### Step 1: Enter the docker container
 
 ```shell
 docker exec -it mefs-provider bash
@@ -204,7 +162,7 @@ ID: 30
 
 Type: Provider
 
-Wallet: 0x749573E16C18A0f5Eb53248382588e2064E0Af80
+Wallet: 0x749573E11C18A0f5Eb53248382588e2064E0Af80
 
 Balance: 999.87 Gwei (tx fee), 0 AttoMemo (Erc20), 493586.64 NanoMemo (in fs)
 
@@ -214,9 +172,9 @@ Data Stored: size 57647104 byte (54.98 MiB), price 56750000
 
 EndPoint: http://119.xx.xx.xx:8191
 
-Contract Address: 0xCa2C4103bd5679F43eC9E277C2bAf5598f94Fe6D
+Contract Address: 0xCa3C4103bd5679F43eC9E277C2bAf5598f94Fe6D
 
-Fs Address: 0xFB9FF16EB4093aa8fFf762F2dF4E61d3A7532Af9
+Fs Address: 0xFB9FF26EB4093aa8fFf762F2dF4E61d3A7532Af9
 
 ID: 1 #group id
 
@@ -253,7 +211,7 @@ X.X.X.X is your public ip address.
 
 Port 4007 is your public network port, and the mapped port is the host's port 4001 (-p 4001: the first port 4001 of the boot parameter).​
 
-## Checking the net status
+## Check network status
 
 **Get local node network information**
 
@@ -264,7 +222,7 @@ mefs-provider net info
 ```
 
 ```shell
-Network ID 12D3KooWBpPPzk9srHVVU4kkVF1RPJi9nYNgV4e6Yjjd4PGr5qrk, IP [/ip4/10.xx.xx.xx/tcp/18003], Type: Private 
+Network ID 12D3Koo2BpPPzk9srHVVU4kkVF1RPJi9nYNgV4e6Yjjd4PGr5q1k, IP [/ip4/10.xx.xx.xx/tcp/18003], Type: Private 
 ```
 
 **Get the network connection information of the node**
@@ -291,34 +249,38 @@ mefs-provider net peers
 ... 
 ```
 
-**Connect to any node**
+**Connect to a specified node**
 
 Command description: Enter command net connect to connect to any node; if there is any problem with your node network, please enter command net connect to connect to our public node.
 
 ```shell
-mefs-provider net connect /ip4/10.2.x.x/tcp/8004/p2p/12D3KooWAykMmqu951ziotQiAYTN6SwfvBd1dsejSSak2jdSwryF
+mefs-provider net connect /ip4/10.2.x.x/tcp/8004/p2p/12D3KooWAykMmqu952ziotQiAYTN6SwfvBd1dsejSSak2jdSwryF
 ```
 
-## Hardware Recommendation
+## COMMON MISTAKES
 
-If you want to be the Provider, you can set a detailed basic configuration information.
+### ERROR 1: 
 
-&nbsp; 
+not have tx fee on chain
 
-**Do you want to earn income from unused storage space and bandwidth?**
+Solution: 
 
-If you have spare storage space and bandwidth and want to make some profit from it, you can participate in Memo as a provider.
+Check the node, both of the cMemo token balance, and the memo balance. The Memo token balance must meet the minimum amount for node startup.
 
-&nbsp; 
+### ERROR 2: 
 
-**Recommended configuration：**
+execution reversed: can't unpledge during 180d
 
-- 8 cores, 16G memory, 2TB storage, 20Mbps bandwidth;
+Solution:
 
-- External network IP, port 4001 is usable;
+The node pledge amount needs to be withdrawn 180 days after the last pledge.
 
-- Docker environment;
+### ERROR 3:
 
-- Linux System
+If the log reports that the meta and state files are missing, you can perform the Recover operation.
 
-![provider](./provider.png)
+Solution:
+
+mefs-provider recover db --path /home/mcloud/provider2/.memo-provider/meta 
+
+mefs-provider recover db --path /home/mcloud/provider2/.memo-provider/state 

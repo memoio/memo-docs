@@ -4,52 +4,12 @@
 
 ### Step 1: Docker Environment Preparation
 
-#### For Linux
-
-If you are using Linux OS, just install docker to continue.
-
-[Install docker](docker-install.md)
-
-Confirm Docker is running after install.
-
-```shell
-service docker start
-```
-
-#### For Windows
-
-If you are using Windows OS, you should install docker first, then install wsl to emulate a linux OS.
-
-Install Docker in Windows
-Just download and install the docker application in Windows.
-
-Download link: https://www.docker.com/
-
-Install wsl
-
-Using ubuntu 20.04 as an example.
-Open the starting menu and run microsoft store.
-Search for wsl, click Ubuntu 20.04 in the results to install.
-
-Switch wsl1 to wsl2
-
-Right click the start memu and open powershell(administrator), run:
-
-```shell
-wsl --set-version Ubuntu-20.04 2
-```
-
-Confirm the wsl version is switched to version 2
-
-```shell
-wsl -l -v
-```
-
-Run Ubuntu 20.04 from start memu to enter an emulated Ubuntu 20.04 and continue.
+View Docker Installation section to install docker.
 
 ### Step 2: Set up the node directory
 
 Node home directory: 
+
 Using "~/memo_user" as an example:
 
 ```shell
@@ -86,7 +46,7 @@ init: Execute the initialization command, which will generate your wallet addres
 
 &nbsp; 
 
-### Step 5: Get wallet address
+### Step 5: Check wallet address
 
 ```shell
 docker run --rm -v $MEFS_PATH:/root --entrypoint mefs-user memoio/mefs-user:latest wallet default
@@ -116,7 +76,7 @@ Email Example
 
 ```shell
 Network: test net
-Wallet Address: 0x70955480f225b23f60c37c4B6e88C63E3ACD723
+Wallet Address: 0x70955480f225b23f61c37c4B6e88C63E3ACD723
 Role: provider
 Twitter Link: 
 https://twitter.com/Geo***71090/status/1387**********01381?s=20*
@@ -128,9 +88,11 @@ The network must be confirmed before application, usually either test net or pro
 
 The wallet address is the wallet address generated in the previous step. 
 
-### Step 7: Modify the configuration file
+Join our discussing with Slack Link:
 
-Here are configurations for megrez.
+https://join.slack.com/t/memo-nru9073/shared_invite/zt-sruhyryo-suc689Nza3z8boa4JkaLqw
+
+### Step 7: Modify the configuration file
 
 ```shell
 docker run --rm -v $MEFS_PATH:/root --entrypoint mefs-user memoio/mefs-user:latest config set --key=contract.version --value=3
@@ -149,7 +111,7 @@ docker run --rm -v $MEFS_PATH:/root --entrypoint mefs-user memoio/mefs-user:late
 ```
 
 ```shell
-docker run --rm -v $MEFS_PATH:/root --entrypoint mefs-user memoio/mefs-user:latest bootstrap add "/ip4/1.182.90.4/tcp/27360/p2p/12D3KooWFhw59q71vpM8LpRTZ4NJmteXLys2pryHAStxG4Mb3wrn"
+docker run --rm -v $MEFS_PATH:/root --entrypoint mefs-user memoio/mefs-user:latest bootstrap add "/ip4/183.240.197.189/tcp/14006/p2p/12D3KooWAMpZPwfJopVnp99oqp4zhbjE1G3LFAkcjfBuiyzyCmv7"
 ```
 
 ### Step 8:Start node
@@ -162,12 +124,14 @@ docker run -d -v $MEFS_PATH:/root -v $MEFS_DATA:/root/data -e PASSWORD="memoriae
 
 - Please make sure your user home directory and password are the same as in the previous step.
 
-If you have any technical problems, please join our Discord server for help. [Memo Labs](https://discord.gg/YXQQwPhMpq)
+If you have any technical problems, please join our Discord server for help. 
+
+[Memo Labs](https://discord.gg/YXQQwPhMpq)
 
 &nbsp;
 
 
-## Checking the running status
+## Checking running status
 
 ### Step 1: Enter the container
 
@@ -272,7 +236,7 @@ mefs-user net info
 ```
 
 ```shell
-Network ID 12D3KooWBpPPzk9srHVVU4kkVF1RPJi9nYNgV4e6Yjjd4PGr5qrk, IP [/ip4/10.xx.xx.xx/tcp/18003], Type: Private
+Network ID 12D3KooWBpPPzk9srHVVU4k1VF1RPJi9nYNgV4e6Yjjd4PGr5qrk, IP [/ip4/10.xx.xx.xx/tcp/18003], Type: Private
 ```
 
 **Get the network connection information of the node**
@@ -299,9 +263,11 @@ mefs-user net peers
 ... 
 ```
 
-**Connect to any node**
+**Connect to a specified node**
 
-Command description: Enter command net connect to connect to any node; if there is any problem with your node network, please enter command net connect to connect to our public node.
+Command description: 
+
+Enter command net connect to connect to any node; if there is any problem with your node network, please enter command net connect to connect to our public node.
 
 ```shell
 mefs-user net connect /ip4/10.2.x.x/tcp/8004/p2p/12D3KooWAykMmqu951ziotQiAYTN6SwfvBd1dsejSSak2jdSwryF
@@ -309,9 +275,9 @@ mefs-user net connect /ip4/10.2.x.x/tcp/8004/p2p/12D3KooWAykMmqu951ziotQiAYTN6Sw
 
 &nbsp;
 
-## Restart after poweroff
+## How to restart node after poweroff
 
-If the account has been started, and then the computer has been shutted down, Docker, or "Windows PowerShell" was been closed, if you need to restart MEMO again, you need to open Docker first, then run the command line " docker start mefs-user" to start.
+If the account has been started, and then the computer has been shutted down, Docker, or "Windows PowerShell" was been closed, if you need to restart MEMO again, you need to open Docker first, then run the command line " docker start mefs-user" to start node.
 
 ```shell
 docker start mefs-user
