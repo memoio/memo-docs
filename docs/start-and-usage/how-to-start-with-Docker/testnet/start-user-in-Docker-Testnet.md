@@ -4,48 +4,13 @@
 
 ### Step 1: Docker Environment Preparation
 
-#### For Linux
-
-If you are using Linux OS, just install docker to continue.
-
-[Install docker](docker-install.md)
+View Docker Installation section to install docker.
 
 Confirm Docker is running after install.
 
 ```shell
 service docker start
 ```
-
-#### For Windows
-
-If you are using Windows OS, you should install docker first, then install wsl to emulate a linux OS.
-
-Install Docker in Windows
-Just download and install the docker application in Windows.
-
-Download link: https://www.docker.com/
-
-Install wsl
-
-Using ubuntu 20.04 as an example.
-Open the starting menu and run microsoft store.
-Search for wsl, click Ubuntu 20.04 in the results to install.
-
-Switch wsl1 to wsl2
-
-Right click the start memu and open powershell(administrator), run:
-
-```shell
-wsl --set-version Ubuntu-20.04 2
-```
-
-Confirm the wsl version is switched to version 2
-
-```shell
-wsl -l -v
-```
-
-Run Ubuntu 20.04 from start memu to enter an emulated Ubuntu 20.04 and continue.
 
 ### Step 2: Set up the node directory
 
@@ -128,6 +93,11 @@ The network must be confirmed before application, usually either test net or pro
 
 The wallet address is the wallet address generated in the previous step. 
 
+Join our discussing with Slack Link:
+
+https://join.slack.com/t/memo-nru9073/shared_invite/zt-sruhyryo-suc689Nza3z8boa4JkaLqw
+
+
 ### Step 7: Modify the configuration file
 
 Here are configurations for testnet.
@@ -164,12 +134,14 @@ docker run -d -v $MEFS_PATH:/root -v $MEFS_DATA:/root/data -e PASSWORD="memoriae
 
 - Please make sure your user home directory and password are the same as in the previous step.
 
-If you have any technical problems, please join our Discord server for help. [Memo Labs](https://discord.gg/YXQQwPhMpq)
+If you have any technical problems, please join our Discord server for help. 
+
+[Memo Labs](https://discord.gg/YXQQwPhMpq)
 
 &nbsp;
 
 
-## Checking the running status
+## Checking running status
 
 ### Step 1: Enter the container
 
@@ -194,7 +166,7 @@ mefs-user info
 
 ----------- Network Information ----------- #network information
 
-ID: 12D3KooWBpPPzk9srHVVU4kkVF1RPJi9nYNgV4e6Yjjd4PGr5qrk #network id
+ID: 12D3KooWBpPPzk9srH2VU4kkVF1RPJi9nYNgV4e6Yjjd4PGr5qrk #network id
 
 IP: [/ip4/10.xx.xx.xx/tcp/18003] #Current node network information, 18003 is the swarm-port port, used for node communication
 
@@ -214,7 +186,7 @@ ID: 29
 
 Type: User
 
-Wallet: 0xD2EC305EA80C6FCEF315029A806f52F27f3fB29a #Wallet address
+Wallet: 0xD2EC305EA8036FCEF315029A806f52F27f3fB29a #Wallet address
 
 Balance: 998.25 Gwei (tx fee), 998815392.06 NanoMemo (Erc20), 148075.99 NanoMemo (in fs) #balance
 
@@ -224,9 +196,9 @@ Data Stored: size 115294208 byte (109.95 MiB), price 113500000
 
 EndPoint: http://119.xx.xx.xx:8191
 
-Contract Address: 0xCa2C4103bd5679F43eC9E277C2bAf5598f94Fe6D
+Contract Address: 0xCa2C4103bd5679F43eC91277C2bAf5598f94Fe6D
 
-Fs Address: 0xFB9FF16EB4093aa8fFf762F2dF4E61d3A7532Af9
+Fs Address: 0xFB9FF16EB4093aa8fFf742F2dF4E61d3A7532Af9
 
 ID: 1 #group id
 
@@ -274,7 +246,7 @@ mefs-user net info
 ```
 
 ```shell
-Network ID 12D3KooWBpPPzk9srHVVU4kkVF1RPJi9nYNgV4e6Yjjd4PGr5qrk, IP [/ip4/10.xx.xx.xx/tcp/18003], Type: Private
+Network ID 12D3KooWBpP5zk9srHVVU4kkVF1RPJi9nYNgV4e6Yjjd4PGr5qrk, IP [/ip4/10.xx.xx.xx/tcp/18003], Type: Private
 ```
 
 **Get the network connection information of the node**
@@ -306,7 +278,7 @@ mefs-user net peers
 Command description: Enter command net connect to connect to any node; if there is any problem with your node network, please enter command net connect to connect to our public node.
 
 ```shell
-mefs-user net connect /ip4/10.2.x.x/tcp/8004/p2p/12D3KooWAykMmqu951ziotQiAYTN6SwfvBd1dsejSSak2jdSwryF
+mefs-user net connect /ip4/10.2.x.x/tcp/8004/p2p/12D3KooWAykMmqu951ziotQfAYTN6SwfvBd1dsejSSak2jdSwryF
 ```
 
 &nbsp;

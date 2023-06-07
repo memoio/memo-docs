@@ -136,3 +136,35 @@ After the installation is complete, you will be prompted to restart the computer
  &nbsp;
 
 Double-click the icon to start docker.
+
+
+# WSL Installation in Windows
+
+If you are using Windows OS, you should install docker first, then install wsl to emulate a linux OS.
+
+Install Docker in Windows
+Just download and install the docker application in Windows.
+
+Download link: https://www.docker.com/
+
+Install wsl
+
+Using ubuntu 20.04 as an example.
+Open the starting menu and run microsoft store.
+Search for wsl, click Ubuntu 20.04 in the results to install.
+
+Switch wsl1 to wsl2
+
+Right click the start memu and open powershell(administrator), run:
+
+```shell
+wsl --set-version Ubuntu-20.04 2
+```
+
+Confirm the wsl version is switched to version 2
+
+```shell
+wsl -l -v
+```
+
+Run Ubuntu 20.04 from start memu to enter an emulated Ubuntu 20.04 and continue.
