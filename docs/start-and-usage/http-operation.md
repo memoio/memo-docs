@@ -4,18 +4,18 @@ Mefs commands can all be operated using HTTP.
 
 Configuration
 
-Before mefs-user starts, perform the following configuration:
+Before mefs-user starts, confirm the following configuration is set in the config.json:
 
 ```shell
 // mefs api port setting, default is 5001
 
-mefs-user config Addresses.API /ip4/0.0.0.0/tcp/5001
+api.address is set to: /ip4/0.0.0.0/tcp/5001
 
 // cross-domain access
 
-mefs-user config --json API.HTTPHeaders.Access-Control-Allow-Origin '["*"]'
+api.accessControlAllowOrigin is set to: ["*"]
 
-mefs-user config --json API.HTTPHeaders.Access-Control-Allow-Methods '["PUT", "GET", "POST"]'
+api.accessControlAllowMethods is set to: ["PUT","GET", "POST"]
 ```
 
 Then restart mefs-user to use HTTP to operate.

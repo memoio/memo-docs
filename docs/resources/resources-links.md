@@ -6,21 +6,27 @@ https://www.memolabs.org/
 
 ### Official Website Blog
 
-https://www.memolabs.org/#/blog
+https://memolabs.org/blog
 
 &nbsp; 
 
 ### Check Our GitHub
 
-Our [GITHUB](https://github.com/memoio/testnet) URL is:
+Our [GITHUB](https://github.com/memoio) URL is:
 
-https://github.com/memoio/testnet
+https://github.com/memoio
 
 &nbsp;
 
 ### Twitter
 
-https://twitter.com/Memo_Labs
+https://twitter.com/MemoLabsOrg
+
+&nbsp;
+
+### Discord
+
+https://discord.com/invite/YG4Ydv2E7X
 
 &nbsp;
 

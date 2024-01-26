@@ -60,33 +60,24 @@ wallet default: Get the default wallet address
 
 ### Step 6: Top up
 
-Please post tweet and send email to complete the registration.
+Starting node needs both the Memo and cMemo token.
 
-1. Please post the tweet using your personal Twitter account and**@**[MemoLabs](https://twitter.com/Memo_Labs).
+To get the cMemo token, there is one faucet, https://faucet.metamemo.one/
 
-Twittercontent：
+This is the MemoChain information.
 
-```shell
-I have joined the MEMO testnet.
-```
+Memochain information
 
-2. Please send an email to [sup@memolabs.org](mailto:sup@memolabs.org) to apply for provider registration, also attach the link to Tweet. 
+Chain RCP: https://chain.metamemo.one:8501/
 
-Email Example
+Currency name: CMEMO
 
-```shell
-Network: test net
-Wallet Address: 0x70955480f225b23f61c37c4B6e88C63E3ACD723
-Role: provider
-Twitter Link: 
-https://twitter.com/Geo***71090/status/1387**********01381?s=20*
-```
+Chain ID: 985
 
-Note: 
+Chain browser: https://scan.metamemo.one:8080/
 
-The network must be confirmed before application, usually either test net or product net.
-
-The wallet address is the wallet address generated in the previous step. 
+To get Memo Tokens for your wallet, you can transfer some Memo Tokens    
+from other wallet address which has enough Memo Tokens. The user needs minimum 1 Memo Tokens.
 
 Join our discussing with Slack Link:
 
