@@ -940,7 +940,7 @@ This command is used to view all the information of the specified bucket, the fo
 Usage
 
 ```shell
-mefs-user lfs headBucke   --bn=test
+mefs-user lfs headBucket   --bn=test
 ```
 
 #### 4.1.4 putObject
@@ -1096,6 +1096,12 @@ OPTIONS:
    --help, -h                  show help (default: false)
 ```
 
+Example
+
+```shell
+mefs-user lfs delObject --bn=test --on=1
+```
+
 #### 4.1.9 downloadObject
 
 Introduction
@@ -1116,6 +1122,12 @@ OPTIONS:
    --length value              read length (default: -1)
    --path value                stored path of file
    --help, -h                  show help (default: false)
+```
+
+Example
+
+```shell
+mefs-user lfs getObject --bn=test --on=1 --path=./index.html
 ```
 
 #### 4.1.10 showStorage

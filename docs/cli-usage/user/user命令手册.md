@@ -774,7 +774,7 @@ mefs-user lfs listBuckets
 此命令为查看指定桶的所有信息，下面为示例（test为桶名）
 
 ```shell
-mefs-user lfs headBucke   --bn=test
+mefs-user lfs headBucket   --bn=test
 ```
 
 ### putObject子命令

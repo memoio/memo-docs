@@ -2,13 +2,13 @@
 
 ## Method 1：
 
-Enter the test chain browser: https://testscan.metamemo.one:8080
+Enter the product chain browser: https://scan.metamemo.one:8080/
 
 &nbsp;
 You can check the account balance by pasting the wallet address into the search box in the upper right corner. There are two account balances:
 
 &nbsp;
-Balance: Test chain token (ABBAS) balance, used for transaction overhead when starting a node
+Balance: Product chain token (ABBAS) balance, used for transaction overhead when starting a node
 
 &nbsp;
 Tokens: Major Token (MEMO) balance, used to pay for storage services and staking.
