@@ -25,7 +25,7 @@ addr：account address;
 After mefs is started, other users can also be shut down by proxy.
 
 ```shell
-mefs-user lfs kill addr --pwd=<password>
+mefs-user lfs kill <addr> --pwd=<password>
 ```
 
 Parameter explanation:
@@ -57,7 +57,7 @@ The user whose address is the public key obtains the file named ObjectName from 
 - Cli
 
 ```shell
-mefs lfs get_object <BucketName> <ObjectName> --addr=<public key>
+mefs_user lfs get_object <BucketName> <ObjectName> --addr=<public key>
 ```
 
 - Http

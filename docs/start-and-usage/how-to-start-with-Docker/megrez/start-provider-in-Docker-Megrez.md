@@ -70,7 +70,7 @@ This is the MemoChain information.
 
 Memochain information 
 
-Chain RCP: https://chain.metamemo.one:8501/ 
+Chain RPC: https://chain.metamemo.one:8501/ 
 
 Currency name: CMEMO 
 
@@ -78,7 +78,12 @@ Chain ID: 985
 
 Chain browser: https://scan.metamemo.one:8080/
 
-To get the Memo Token,  please transfer the Memo Token to the current wallet address from the other address with Memo Token.  The provider needs minimum 30 Memo Tokens.  
+To get Memo Tokens for your wallet, you can transfer some Memo Tokens    
+from other wallet address which has enough Memo Tokens. The provider needs minimum 30 Memo Tokens.
+
+Join our discussing with Slack Link:
+
+https://join.slack.com/t/memo-nru9073/shared_invite/zt-sruhyryo-suc689Nza3z8boa4JkaLqw
 
 ### Step 7: Modify the configuration file
 

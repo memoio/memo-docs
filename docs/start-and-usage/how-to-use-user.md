@@ -79,7 +79,7 @@ This command is used to view all the information of the specified bucket, the fo
 Usage
 
 ```shell
-./mefs-user lfs headBucke   --bn=test
+./mefs-user lfs headBucket   --bn=test
 ```
 
 ## 4 putObject subcommand
