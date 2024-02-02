@@ -60,6 +60,8 @@ mefs-user settle pledgeGet
 mefs-user settle pledgeWithdraw "1000 NanoMemo"
 ```
 
+Caution: The pleged MEMOs can not be extracts from the pledge pool before 180 days.
+
 ![5](./pledge5.png) 
 
 ## Move memo from Fs file system to wallet

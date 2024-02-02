@@ -212,6 +212,12 @@ OPTIONS:
    --help, -h                  show help (default: false)
 ```
 
+Example
+
+```shell
+./mefs-user lfs delObject --bn=test --on=1
+```
+
 ## 9 downloadObject subcommand
 
 Introduction
@@ -232,6 +238,12 @@ OPTIONS:
    --length value              read length (default: -1)
    --path value                stored path of file
    --help, -h                  show help (default: false)
+```
+
+Example
+
+```shell
+./mefs-user lfs getObject --bn=test --on=1 --path=./index.html
 ```
 
 ## 10 showStorage subcommand

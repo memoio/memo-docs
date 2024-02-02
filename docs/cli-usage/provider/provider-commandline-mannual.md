@@ -145,7 +145,7 @@ View the default wallet address
 Example
 
 ```shell
-mefs-provider wallet default
+MEFS_PATH=~/.memo-provider ./mefs-provider wallet default
 ```
 
 #### 2.3.4 wallet export 
@@ -157,7 +157,7 @@ Export the wallet's private key
 Example 
 
 ```shell
-mefs-provider wallet export wallet-address
+MEFS_PATH=~/.memo-provider ./mefs-provider wallet export wallet-address
 ```
 
 Parameter wallet-address is the wallet address of the node.
@@ -192,7 +192,7 @@ The set subcommand is used to set the value of the specified option in the confi
 Usage
 
 ```shell
-mefs-provider config set -h
+MEFS_PATH=~/.memo-provider ./mefs-provider config set -h
 ```
 
 Options
@@ -208,7 +208,7 @@ Example
 Configure the value of contract.endPoint
 
 ```shell
-mefs-provider config set --key=contract.endPoint --value="https://testchain.metamemo.one:24180"
+MEFS_PATH=~/.memo-provider ./mefs-provider config set --key=contract.endPoint --value="https://testchain.metamemo.one:24180"
 ```
 
 #### 2.4.2 config get
@@ -220,7 +220,7 @@ This command is used to get the value of the specified configuration item
 Usage
 
 ```shell
-mefs-provider config get -h
+MEFS_PATH=~/.memo-provider ./mefs-provider config get -h
 ```
 
 Example
@@ -228,7 +228,7 @@ Example
 Get the contract.endPoint value
 
 ```shell
-mefs-provider config get --key=contract.endPoint
+MEFS_PATH=~/.memo-provider ./mefs-provider config get --key=contract.endPoint
 ```
 
 ### 2.5 bootstrap
@@ -240,7 +240,7 @@ This command is used to set the bootstrap node in the configuration file, multip
 Usage
 
 ```shell
-mefs-provider bootstrap -h
+MEFS_PATH=~/.memo-provider ./mefs-provider bootstrap -h
 
 COMMANDS:
    list     list bootstrap addresses
@@ -266,7 +266,7 @@ Add a bootstrap node
 Example
 
 ```shell 
-mefs-provider bootstrap add "/ip4/103.xx.xx.xx/tcp/44006/p2p/12D3KooWQgakkyTFzcMh8JVbNK3FtiwJZz264sStq8QKBTeHwR3D"
+MEFS_PATH=~/.memo-provider ./mefs-provider bootstrap add "/ip4/103.xx.xx.xx/tcp/44006/p2p/12D3KooWQgakkyTFzcMh8JVbNK3FtiwJZz264sStq8QKBTeHwR3D"
 ```
 
 #### 2.5.3 clear 
@@ -286,7 +286,7 @@ Network related commands
 Usage
 
 ```shell
-./mefs-provider net -h
+MEFS_PATH=~/.memo-provider ./mefs-provider net -h
 
 COMMANDS:
    info      get net info
@@ -308,7 +308,7 @@ This command checks node network information
 Usage
 
 ```shell 
-mefs-provider info -h
+MEFS_PATH=~/.memo-provider ./mefs-provider info -h
 
 USAGE:
    mefs-provider info command [command options] [arguments...]
@@ -321,7 +321,7 @@ COMMANDS:
 Example
 
 ```shell
-mefs-provider net info 
+MEFS_PATH=~/.memo-provider ./mefs-provider net info 
 
 Network ID 12D3K..., IP [/ip4/172.xx.xx.xx/tcp/4001 /ip4/128.xx.xx.xx/tcp/39525 /ip4/10.xx.xx.xx/tcp/39525], Type: Private
 ```
@@ -329,7 +329,7 @@ Network ID 12D3K..., IP [/ip4/172.xx.xx.xx/tcp/4001 /ip4/128.xx.xx.xx/tcp/39525 
 '12D3K...' here is the peerID of this node.
 
 ```shell 
-mefs-provider net info self
+MEFS_PATH=~/.memo-provider ./mefs-provider net info self
 
 ID:  26 provider 2
 ```
@@ -343,7 +343,7 @@ Show the network information of all nodes currently connected.
 Usage
 
 ```shell
-mefs-provider net peers
+MEFS_PATH=~/.memo-provider ./mefs-provider net peers
 
 12D3KooWHXmKSneyGqE8fPrTmNTBs2rR9pWTdNcgVG3Tt5htJef7 [/ip4/121.xx.xx.xx/tcp/23456]
 12D3KooWB5yMrUL6NG6wHrdR9V114mUDkpJ5Mp3c1sLPHwiFi6DN [/ip4/192.xx.xx.xx/tcp/4201]
@@ -358,7 +358,7 @@ This command connects to a specified node manually.
 Usage
 
 ```shell 
-mefs-provider net connect -h
+MEFS_PATH=~/.memo-provider ./mefs-provider net connect -h
 
 USAGE:
    mefs-provider net connect [command options] [peer multiaddr (/ip4/1.2.3.4/tcp/5678/p2p/12D...)]
@@ -371,7 +371,7 @@ About how to construction the multiaddr for a node.
 First use the net info command to view the network information of the node.
 
 ```shell
-./mefs-provider net info
+MEFS_PATH=~/.memo-provider ./mefs-provider net info
 Network ID 12D3K..., IP [/ip4/1.2.3.4/tcp/5678/], Type: Private
 ```
 
@@ -390,7 +390,7 @@ View node information according to peerID, command usage:
 Usage
 
 ```shell
-mefs-provider net findpeer -h
+MEFS_PATH=~/.memo-provider ./mefs-provider net findpeer -h
 
 USAGE:
    mefs-provider net findpeer [command options] [peerID (12D...)]
@@ -399,7 +399,7 @@ USAGE:
 Example
 
 ```shell
-mefs-provider net findpeer 12D3KooW...
+MEFS_PATH=~/.memo-provider ./mefs-provider net findpeer 12D3KooW...
 ```
 
 #### 3.1.5 declare
@@ -411,7 +411,7 @@ Used for the provider node to declare its own public network ip address; (only t
 Usage
 
 ```shell
-./mefs-provider net declare -h
+MEFS_PATH=~/.memo-provider ./mefs-provider net declare -h
 
 NAME:
    mefs-provider net declare - declare public network address
@@ -429,7 +429,7 @@ This command interacts with state db to obtain pay and penalty information about
 Usage
 
 ```shell
-mefs-provider state -h
+MEFS_PATH=~/.memo-provider ./mefs-provider state -h
 
 COMMANDS:
    post      list post
@@ -467,7 +467,7 @@ This command is used to list connected roles
 Usage 
 
 ```shell
-mefs-provider role list
+MEFS_PATH=~/.memo-provider ./mefs-provider role list
 ```
 
 #### 3.4 info
@@ -479,7 +479,7 @@ This command checks the basic information of this node
 Usage
 
 ```shell
-mefs-provider info -h
+MEFS_PATH=~/.memo-provider ./mefs-provider info -h
 ```
 
 Options
@@ -493,12 +493,12 @@ Options
 Example
 
 ```shell
-mefs-provider info
+MEFS_PATH=~/.memo-provider ./mefs-provider info
 ```
 or
 
 ```shell
-mefs-provider info -all true
+MEFS_PATH=~/.memo-provider ./mefs-provider info -all true
 ```
 
 ### 3.5 settle
@@ -510,7 +510,7 @@ Node pledge, withdrawal and other operations.
 Usage
 
 ```shell
-mefs-provider settle -h
+MEFS_PATH=~/.memo-provider ./mefs-provider settle -h
 
 COMMANDS:
    setDesc               Set description for a node. Especially for providers, if desc is set to 'cloud', they will be selected as dc in buckets preferentially.
@@ -557,7 +557,7 @@ Example
 To pledge 1 Memo for this node.
 
 ```shell
-mefs-provider settle pledgeAdd "1 Memo"
+MEFS_PATH=~/.memo-provider ./mefs-provider settle pledgeAdd "1 Memo"
 ```
 
 #### 3.5.3 pledgeGet
@@ -569,7 +569,7 @@ View the current pledge amount.
 Example
 
 ```shell
-mefs-provider settle pledgeGet
+MEFS_PATH=~/.memo-provider ./mefs-provider settle pledgeGet
 ```
 
 #### 3.5.4 pledgeWithdraw
@@ -583,7 +583,7 @@ Example
 Withdraw the pledge of 0.5 Memo to the Fs account
 
 ```shell
-mefs-provider settle pledgeWithdraw "0.5 Memo"
+MEFS_PATH=~/.memo-provider ./mefs-provider settle pledgeWithdraw "0.5 Memo"
 ```
 
 #### 3.5.5 pledgeRewardWithdraw
@@ -596,7 +596,7 @@ Example
 
 Withdraw 0.5Memo of pledge reward to Fs account
 ```shell
-mefs-provider settle pledgeRewardWithdraw "0.5 Memo"
+MEFS_PATH=~/.memo-provider ./mefs-provider settle pledgeRewardWithdraw "0.5 Memo"
 ```
 
 #### 3.5.6 withdraw
@@ -609,7 +609,7 @@ Example
 
 Take out 0.5memo of the Fs file system to the (Erc20) wallet
 ```shell
-mefs-provider settle withdraw "0.5 Memo"
+MEFS_PATH=~/.memo-provider ./mefs-provider settle withdraw "0.5 Memo"
 ```
 
 #### 3.5.7 quitRole
@@ -626,7 +626,7 @@ For providers and keepers, the role pledge amount provided when registering the 
 Example
 
 ```shell
-mefs-provider settle quitRole --really-do-it
+MEFS_PATH=~/.memo-provider ./mefs-provider settle quitRole --really-do-it
 ```
 
 #### 3.5.8 alterPayee 
@@ -644,7 +644,7 @@ View current node version
 Usage
 
 ```shell
-mefs-provider version
+MEFS_PATH=~/.memo-provider ./mefs-provider version
 ```
 
 ### 3.7 order
@@ -656,7 +656,7 @@ View order related information
 Usage
 
 ```shell
-mefs-provider order
+MEFS_PATH=~/.memo-provider ./mefs-provider order
 
 COMMANDS:
    jobList  list jobs of all pros
@@ -678,7 +678,7 @@ List all users who has data stored in this provider.
 Usage
 
 ```shell
-mefs-provider order list
+MEFS_PATH=~/.memo-provider ./mefs-provider order list
 ```
 
 #### 3.7.2 payList
@@ -690,7 +690,7 @@ List all order status with provider nodes
 Usage
 
 ```shell
-mefs-provider order payList
+MEFS_PATH=~/.memo-provider ./mefs-provider order payList
 ```
 
 ## 4 provider daily used commands
@@ -704,7 +704,7 @@ It is used to repair the db as much as possible when the node starts abnormally.
 Usage
 
 ```shell
-mefs-provider recover db -h
+MEFS_PATH=~/.memo-provider ./mefs-provider recover db -h
 --path specifies the database path to repair --deType the type of repair data (meta or state)
 ```
 
@@ -713,7 +713,7 @@ Example
 Repair state database
 
 ```shell
-mefs-provider recover db --path=/root/.memo-provider/state --dbType=state
+MEFS_PATH=~/.memo-provider ./mefs-provider recover db --path=/root/.memo-provider/state --dbType=state
 ```
 
 ### 4.2 backup
@@ -733,7 +733,7 @@ Export the state database to a file, using the following method:
 Usage
 
 ```shell
-mefs-provider backup export -h
+MEFS_PATH=~/.memo-provider ./mefs-provider backup export -h
 
 USAGE:
    mefs-provider backup export [command options] [arguments...]
@@ -749,7 +749,7 @@ Example
 Export the state database to the current directory
 
 ```shell
-mefs-provider backup export --path=./ --dbType=state
+MEFS_PATH=~/.memo-provider ./mefs-provider backup export --path=./ --dbType=state
 ```
 
 #### 4.2.2 import
@@ -761,7 +761,7 @@ To import a database from a file, use the following method:
 Usage
 
 ```shell
-mefs-provider backup import -h
+MEFS_PATH=~/.memo-provider ./mefs-provider backup import -h
 
 USAGE:
    mefs-provider backup import [command options] [arguments...]
@@ -777,7 +777,7 @@ Example
 import state database
 
 ```shell
-mefs-provider backup import --path=./state-xxxxxxxxx.db --dbType=state
+MEFS_PATH=~/.memo-provider ./mefs-provider backup import --path=./state-xxxxxxxxx.db --dbType=state
 ```
 
 ### 4.3 restrict
@@ -789,7 +789,7 @@ The provider node sets the whitelist function. When creating a bucket, the nodes
 Usage
 
 ```shell
-mefs-provider restrict -h
+MEFS_PATH=~/.memo-provider ./mefs-provider restrict -h
 
 USAGE:
    mefs-provider restrict command [command options] [arguments...]
@@ -817,7 +817,7 @@ Example
 View the nodes in the whitelist
 
 ```shell
-mefs-provider restrict list
+MEFS_PATH=~/.memo-provider ./mefs-provider restrict list
 ```
 
 #### 4.3.2 add 
@@ -831,7 +831,7 @@ Example
 Add provider node to whitelist
 
 ```shell
-mefs-provider restrict add PID
+MEFS_PATH=~/.memo-provider ./mefs-provider restrict add PID
 ```
 The parameter PID is the provider node ID to be added to the whitelist
 
@@ -847,7 +847,7 @@ Example
 Delete whitelist nodes
 
 ```shell
-mefs-provider restrict delete PID
+MEFS_PATH=~/.memo-provider ./mefs-provider restrict delete PID
 ```
 The parameter PID is the provider node ID to be added to the whitelist
 
@@ -876,13 +876,13 @@ Example
 Enable the whitelist function
 
 ```shell
-mefs-provider restrict set --enable
+MEFS_PATH=~/.memo-provider ./mefs-provider restrict set --enable
 ```
 
 Turn off the whitelist function
 
 ```shell
-mefs-provider restrict set disable
+MEFS_PATH=~/.memo-provider ./mefs-provider restrict set disable
 ```
 #### 4.3.6 stat 
 
@@ -895,7 +895,7 @@ Example
 Check whitelist status
 
 ```shell
-mefs-provider restrict stat
+MEFS_PATH=~/.memo-provider ./mefs-provider restrict stat
 ```
 
 ## 5 Other commands
@@ -909,7 +909,7 @@ Query the value of the token file of the node. The token file is located in the 
 Usage
 
 ```shell
-mefs-provider auth info -h
+MEFS_PATH=~/.memo-provider ./mefs-provider auth info -h
 
 USAGE:
    mefs-provider restrict command [command options] [arguments...]
@@ -937,7 +937,7 @@ Subcommands
 Usage
 
 ```shell
-mefs-provider log setLevel -h
+MEFS_PATH=~/.memo-provider ./mefs-provider log setLevel -h
 
 NAME:
    mefs-provider log setLevel - Set log level
@@ -949,5 +949,5 @@ USAGE:
 Example
 
 ```shell
-mefs-provider log setLevel debug
+MEFS_PATH=~/.memo-provider ./mefs-provider log setLevel debug
 ```
