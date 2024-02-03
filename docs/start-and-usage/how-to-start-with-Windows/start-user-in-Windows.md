@@ -2,7 +2,7 @@
 
 &nbsp; 
 
-## Step 1
+## Step 1 Download install package
 
 Download url:
 
@@ -10,7 +10,7 @@ https://github.com/memoio/go-mefs-release/releases/
 
 &nbsp;
 
-## Step 2
+## Step 2 Unzip package
 
 Unzip mefs-user-install.zip
 
@@ -18,7 +18,7 @@ Unzip mefs-user-install.zip
 
 ​&nbsp;
 
-## Step 3
+## Step 3 install
 
 Enter "mefs-user-install" file folder, double click register.exe for regestering user.
 
@@ -36,33 +36,44 @@ Enter "mefs-user-install" file folder, double click register.exe for regestering
 
 ​&nbsp;
 
-## Step 4
+## Step 4 Check account address
 
 After successfully registered user, you can see the content of installation directory as follows:
 
 ​![step](./step4.png)
 
-​&nbsp;
-
-## Step 5
-
 Open "account.txt." It will contain your wallet address and created password as shown below.
 
 Contact the Memolabs team to recharge your wallet with some tokens before proceeding to the next stage.
 
-​![step](./step5.png)
+​![step](./step4.1.png)
 
-Please post tweet and send email to complete the registration.
+​&nbsp;
 
-1. Please post the tweet using your personal Twitter account and@MemoLabs(https://twitter.com/Memo_Lab)
+## Step 5 Top UP
 
-Twittercontent:I have joined the MEMO
+Starting node needs both the Memo and cMemo token.
 
-2. Please send an email to
+To get the cMemo token, there is one faucet, https://faucet.metamemo.one/
 
-sup@memolabs.org 
+This is the MemoChain information.
 
-to apply for User registration, also attach the link to Tweet. Email content: wallet address (such as 0x... generated above)、role (User) ,The wallet address is the wallet address generated in the previous step https://twitter.com/Geo***71090/status/1387**********01381?s=20
+Memochain information
+
+Chain RPC: https://chain.metamemo.one:8501/
+
+Currency name: CMEMO
+
+Chain ID: 985
+
+Chain browser: https://scan.metamemo.one:8080/
+
+To get Memo Tokens for your wallet, you can transfer some Memo Tokens
+from other wallet address which has enough Memo Tokens. The user needs minimum 1 Memo Tokens.
+
+Join our discussing with Slack Link:
+
+https://join.slack.com/t/memo-nru9073/shared_invite/zt-sruhyryo-suc689Nza3z8boa4JkaLqw
 
 **If you want to check the account balance,Please refer to this link**
 
@@ -70,52 +81,36 @@ to apply for User registration, also attach the link to Tweet. Email content: wa
 
 ​&nbsp;
 
-## Step 6
+## Step 6 Start user
 
-As you complete wallet charging, double click "install.exe" to install user node. Caution the directory for installation is the same as the one for registering.
+When your installation completed, the content of installation folder is as follows:
 
-​![step6](./step6.png)
+​![step](./step6.png)
 
-![step6.1](./step6.1.png)
+Mmeanwhile there are 2 more icons appeared on your desktop.
 
-​![step6.2](./step6.2.png)
+​![step](./step6.1.png)
 
-![step6.3](./step6.3.png)
+Run 'memo_start' icon on desktop to start user.
 
-![step6.4](./step6.4.png)
+The running window will show that user node is starting, and data is being synchronized. This will take about 5 hours to complete, please be patient. 
 
-​&nbsp;
+​![step](./step6.2.png)
 
-## Step 7
-
-When your installation completed, the content of installation folder is as follows, meanwhile there are 2 more icons appeared on your desktop.
-
-​![step](./step7.png)
-​![step](./step7.1.png)
 
 &nbsp;
 
-## Step 8
-
-Double click memo_start icon or the start.bat file in the installation folder, it will execute mefs-user binary and generate an file named "api" in the installation folder. Log files are in the log foler.
-
-​![step](./step8.png)
-
-​![step](./step8.1.png)
-
-​&nbsp;
-
-## Step 9
+## Step 7 Check process
 
 Now you can see two "mefs-user.exe" in the task manager shows the user node and gateway is running.
 
-​![9](./step9.png)
+​![7](./step7.png)
 
 ​&nbsp;
 
-## Step 10
+## Step 8 View Webui to work with User Node
 
-Open URL http://127.0.0.1:9090 in your web browser, and open the account.txt in the memouser folder to view your login imformation
+Open URL http://127.0.0.1:9090 in your web browser to use user WebUI, and open the account.txt in the memouser folder to view your login imformation
 
 ​![10](./step10.png)
 
@@ -124,8 +119,6 @@ Open URL http://127.0.0.1:9090 in your web browser, and open the account.txt in 
 ![10.2](./step10.2.png)
 
 ​&nbsp;
-
-## Step 11
 
 ### Create bucket
 
@@ -139,8 +132,6 @@ After that you can begin create bucket.
 
 ​&nbsp;
 
-## Step 12
-
 ### Upload file
 
 Caution: When a new bucket is created, it needs about 2 minutes to be confirmed. So wait a moment before you start to upload files into a new bucket.
@@ -153,8 +144,6 @@ Caution: When a new bucket is created, it needs about 2 minutes to be confirmed.
 
 ​&nbsp; 
 
-## Step 13
-
 ### Download file
 
 ![13](./step13.png)
@@ -163,7 +152,7 @@ Caution: When a new bucket is created, it needs about 2 minutes to be confirmed.
 
 &nbsp; 
 
-## Step 14
+## Step 9 Stop User
 
 You can stop user node with following 2 methods. But this just closes node service, the gateway service is not closed, you have to manually close it in the task manager for now.
 
