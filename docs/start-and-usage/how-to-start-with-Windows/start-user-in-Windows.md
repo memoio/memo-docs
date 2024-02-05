@@ -20,7 +20,7 @@ Unzip mefs-user-install.zip
 
 ## Step 3 install
 
-Enter "mefs-user-install" file folder, double click register.exe for regestering user.
+Enter "mefs-user-install" file folder, double click install.exe for regestering user.
 
 ​![step3](./step3.png)
 
@@ -77,7 +77,7 @@ https://join.slack.com/t/memo-nru9073/shared_invite/zt-sruhyryo-suc689Nza3z8boa4
 
 **If you want to check the account balance,Please refer to this link**
 
-[How to checking the account balance]()
+[How to checking the account balance](./how-to-check-balance.md)
 
 ​&nbsp;
 
@@ -100,7 +100,7 @@ The running window will show that user node is starting, and data is being synch
 
 &nbsp;
 
-## Step 7 Check process
+## Step 7 Check Running Status
 
 Now you can see two "mefs-user.exe" in the task manager shows the user node and gateway is running.
 
@@ -108,15 +108,13 @@ Now you can see two "mefs-user.exe" in the task manager shows the user node and 
 
 ​&nbsp;
 
-## Step 8 View Webui to work with User Node
+## Step 8 Using User with Webui
 
 Open URL http://127.0.0.1:9090 in your web browser to use user WebUI, and open the account.txt in the memouser folder to view your login imformation
 
-​![10](./step10.png)
+​![4](./step4.png)
 
-![10.1](./step10.1.png)
-
-![10.2](./step10.2.png)
+![4.1](./step4.1.png)
 
 ​&nbsp;
 
